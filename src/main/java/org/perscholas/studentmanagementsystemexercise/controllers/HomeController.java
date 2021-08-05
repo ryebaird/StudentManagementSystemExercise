@@ -10,6 +10,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(){
+        log.warn("executing...");
         return "template";
     }
 }

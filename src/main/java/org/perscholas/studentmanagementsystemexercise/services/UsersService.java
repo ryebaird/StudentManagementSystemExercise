@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Slf4j
 @Transactional
-public class StudentService {
+public class UsersService {
 
     // autowire repo
 
