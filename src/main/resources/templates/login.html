@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org http://www.thymeleaf.org
+  http://www.ultraq.net.nz/thymeleaf/layout https://www.ultraq.net.nz/thymeleaf/layout
+  http://www.thymeleaf.org/thymeleaf-extras-springsecurity4 http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Template</title>
+    <!-- Favicon-->
+    <!-- TODO: ADD FAVICON REFERENCE -->
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+    <link href="css/mystyles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/6fad4e3ac5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Responsive navbar-->
+<nav class="navbar">
+    <a href="/">
+        <h1 class="navbar__title">Student Management System</h1>
+    </a>
+    <ul class="list list--inline">
+        <li class="list__item navbar__list-item dropdown">
+                <span class="dropdown__header">Admin
+                    <i class="dropdown__icon--tick fas fa-chevron-down"></i>
+                </span>
+            <ul class="list dropdown__content dropdown__content--right card--bordered-shadow">
+                <li class="list__item dropdown__item">
+                    <a href="/all_students">Show All Students</a>
+                </li>
+                <li class="list__item dropdown__item">
+                    <a href="/all_courses">Show All Courses</a>
+                </li>
+                <li class="list__item dropdown__item">
+                    <a href="/student_by_email">Get Student By Email</a>
+                </li>
+                <li class="list__item dropdown__item">
+                    <a href="/student_courses">Get Student Courses</a>
+                </li>
+            </ul>
+        </li>
+        <li class="list__item navbar__list-item">
+            <a href="/register_student">Register New Student</a>
+        </li>
+        <li class="list__item navbar__list-item">
+            <a href="/register_to_course">Register To a Course</a>
+        </li>
+        <li class="list__item navbar__list-item">
+            <a href="/login">Login</a>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <section class="block-login">
+        <h1>Login</h1>
+        <form class="form-login" action="." method="post">
+            <input class="form-login__input" type="text" placeholder="Student Name">
+            <input class="form-login__input" type="password" placeholder="Password">
+            <input class="form-login__input" type="password" placeholder="Confirm Password">
+            <input class="form-login__input" type="email" placeholder="Email">
+            <input class="btn btn--outline" type="submit" value="Submit">
+        </form>
+    </section>
+</main>
+</body>
+</html>

@@ -18,16 +18,45 @@ import java.io.Serializable;
 @Slf4j
 public class Users implements Serializable {
 
+//    @Id
+//    @NotNull
+//    @NonNull
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @ToString.Include
+//    Long stuId;
+
+    @NotNull
+    @NonNull
+    @ToString.Include
+    @NotBlank(message = "Please enter a name!")
+    String name;
+
     @Id
     @NotNull
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @NonNull
     @ToString.Include
-    Long stuId;
+    @NotBlank(message = "Please enter a valid email!") // TODO: delete this and replace with the @Email below
+//    @Email(message = "Please enter a valid email!")
+    String email;
 
+    @NotNull
+    @NonNull
+    @ToString.Include
+    @NotBlank(message = "Please enter a password!")
+    String password;
 
-
+    @OneToMany(cascade = CascadeType.ALL)
+    List<Courses> courses;
     //add Equals and Hashcode methods manually
 
-
+    public boolean equals(Users user) {
+        if (this.toString() == user.toString()) {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
 }
